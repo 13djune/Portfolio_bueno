@@ -1,0 +1,43 @@
+{
+  "name": "nuxt-app",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare",
+    "build:css": "sass styles/index.scss dist/main.css"
+  },
+  "dependencies": {
+    "@interactjs/actions": "^1.10.27",
+    "@interactjs/auto-start": "^1.10.27",
+    "@interactjs/dev-tools": "^1.10.27",
+    "@interactjs/interact": "^1.10.27",
+    "@interactjs/modifiers": "^1.10.27",
+    "@nuxt/ui": "^2.19.2",
+    "@nuxt/vite-builder": "3.13.2",
+    "@nuxtjs/color-mode": "^3.5.2",
+    "@parcel/watcher": "^2.5.0",
+    "esbuild": "^0.24.0",
+    "interactjs": "^1.10.27",
+    "nuxt": "^3.14.1592",
+    "pixelarticons": "^1.8.1",
+    "signature_pad": "^5.0.4",
+    "supports-color": "^9.4.0",
+    "tailwindcss": "^3.4.15",
+    "vite": "^5.4.11",
+    "vue": "latest",
+    "vue-drawing-canvas": "^1.0.14",
+    "vue-router": "latest",
+    "vue-signature-pad": "^3.0.2"
+  },
+  "packageManager": "pnpm@9.12.3+sha512.cce0f9de9c5a7c95bef944169cc5dfe8741abfb145078c0d508b868056848a87c81e626246cb60967cbd7fd29a6c062ef73ff840d96b3c86c40ac92cf4a813ee",
+  "devDependencies": {
+    "@iconify-json/pixelarticons": "^1.2.1",
+    "sass": "^1.81.1",
+    "sass-embedded": "^1.81.1",
+    "sass-loader": "^13.0.0"
+  }
+}
