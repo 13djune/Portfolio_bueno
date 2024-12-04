@@ -35,6 +35,7 @@ export default {
   position: relative;
   display: flex;
   margin: 50px;
-  width: 300px;
+  width: 30rem;
+  left: calc((100vw - 30rem) / 2);
 }
 </style>

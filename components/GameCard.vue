@@ -195,7 +195,7 @@ $fs-card-title: 1.125em;
 
   display: flex;
   flex-direction: column;
-  padding: 1rem;
+  padding: 3rem;
   max-height: 350px;
   margin: auto;
   font-size: $fs-h2;
@@ -228,6 +228,11 @@ $fs-card-title: 1.125em;
 .cardTitle {
   margin: 0 0 15px;
   font-size: $fs-card-title;
+}
+.cardText {
+  margin: 0 0 15px;
+  font-size: 25px;
+  text-align: center;
 }
 
 @for $i from 1 through $cardsTotal {

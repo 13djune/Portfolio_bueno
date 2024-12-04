@@ -19,8 +19,8 @@ const colorMode = useColorMode();
 
 // Definición de la propiedad reactiva
 const visibleCards = ref([
-  { title: "Título 1", text: "Texto descriptivo de la primera carta." },
-  { title: "Título 2", text: "Texto de la segunda carta." },
+{ title: "Hi!! I'm Belén,", text: "a Multimedia and Graphic Designer and currently studying a Master's degree in UX/UI, in Madrid." },
+{ title: "2", text: "Texto de la segunda carta." },
   { title: "Título 3", text: "Más detalles de la tercera carta." }
 ]);
 
