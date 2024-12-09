@@ -1,20 +1,22 @@
 <template>
   <div class="cards">
     <GameCard
-      v-for="(card, index) in cards"
-      :key="card"
+    v-for="(card, index) in cards"
+      :key="card.id"
       :card="card"
       :is-current="index === 0"
-      @cardAccepted="$emit('cardAccepted');"
-      @cardRejected="$emit('cardRejected');"
-      @cardSkipped="$emit('cardSkipped');"
-      @hideCard="$emit('hideCard');"
+      :style="{ zIndex: getCardZIndex(index) }"
+      @cardAccepted="$emit('cardAccepted')"
+      @cardRejected="$emit('cardRejected')"
+      @cardSkipped="$emit('cardSkipped')"
+      @hideCard="$emit('hideCard')"
     />
   </div>
 </template>
 
 <script>
 import GameCard from "@/components/GameCard";
+import "../assets/styles.css"; // Asegúrate de que tus variables CSS se importen correctamente
 
 export default {
   components: {
@@ -26,16 +28,23 @@ export default {
       type: Array,
       required: true
     }
-  }
+  },
+  methods: {
+    getCardZIndex(index) {
+      if (this.cards[index].isCurrent) {
+        return 3; // Z-index más alto para la tarjeta activa
+      } else if (index === 0) {
+        return 2; // Segunda tarjeta
+      } else if (index === 1) {
+        return 1; // Tercera tarjeta
+      } else {
+        return 0; // Otras tarjetas si es necesario
+      }
+    },
+  },
 };
 </script>
 
 <style lang="scss" scoped>
-.cards {
-  position: relative;
-  display: flex;
-  margin: 50px;
-  width: 30rem;
-  left: calc((100vw - 30rem) / 2);
-}
+
 </style>

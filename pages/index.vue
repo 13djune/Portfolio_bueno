@@ -13,15 +13,17 @@
 <script setup>
 import { ref } from 'vue';
 import GameCardsStack from "@/components/GameCardsStack.vue";
+import interact from "interactjs";
+import "../assets/styles.css"; // Asegúrate de que este archivo esté configurado correctamente
 
 
 const colorMode = useColorMode();
 
 // Definición de la propiedad reactiva
 const visibleCards = ref([
-{ title: "Hi!! I'm Belén,", text: "a Multimedia and Graphic Designer and currently studying a Master's degree in UX/UI, in Madrid." },
-{ title: "2", text: "Texto de la segunda carta." },
-  { title: "Título 3", text: "Más detalles de la tercera carta." }
+{ id: 1, title: "Hi!! I'm Belén,", text: "a Multimedia and Graphic Designer and currently studying a Master's degree in UX/UI, in Madrid." },
+{ id: 2, title: "2", text: "Texto de la segunda carta." },
+  {id: 3, title: "Título 3", text: "Más detalles de la tercera carta." }
 ]);
 
 // Definición de los métodos
@@ -38,7 +40,7 @@ function handleCardSkipped() {
 }
 
 function removeCardFromDeck() {
-  visibleCards.value.shift(); // Usar .value para acceder a la propiedad de ref
+  visibleCards.value.splice(0, 1); // Usar .value para acceder a la propiedad de ref
 }
 </script>
 

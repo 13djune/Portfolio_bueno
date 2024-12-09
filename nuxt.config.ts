@@ -17,5 +17,8 @@ export default defineNuxtConfig({
   ui: {
     global: true
   },
+  css: [
+    '~/assets/styles.css' // Ruta al archivo CSS
+  ]
  
 })
