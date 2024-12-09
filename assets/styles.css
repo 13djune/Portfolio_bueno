@@ -15,8 +15,16 @@
     --fs-h2: 1.5rem; /* 24px / 16px */
     --fs-h1: 2rem;   /* 32px / 16px */
     --fw-bold: 700;  /* El valor original `00` estaba incorrecto */
+    --fw-light: 400;  
+}
+  body {
+    background-color: #f7fdfb;
+    color: #062016;
   }
-  
+  .dark-mode body {
+    background-color: #020806;
+    color: #e1f9f0;
+  }
   /* Estilos de la tarjeta */
   .card {
     border-radius: 15px;
@@ -55,6 +63,7 @@
   .cardTitle {
     margin: 0 0 15px;
     font-size: var(--fs-h1); /* valor original de $fs-card-title */
+    font-weight: var(--fw-bold);
   }
   
   /* Estilo para el texto de la tarjeta */
@@ -62,6 +71,7 @@
     margin: 0 0 15px;
     font-size: var(--fs-h2);
     text-align: center;
+    font-weight: var(--fw-light);
   }
   
   /* Estilo para elementos adicionales de la tarjeta (en el caso de un pseudo-elemento) */

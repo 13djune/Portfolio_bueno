@@ -2,6 +2,8 @@
     <h1>adios</h1>
 </template>
 <script setup>
+import interact from "interactjs";
+import "../assets/styles.css"; // Asegúrate de que este archivo esté configurado correctamente
 
 
 const colorMode = useColorMode();

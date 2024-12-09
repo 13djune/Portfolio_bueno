@@ -45,6 +45,10 @@
               let x = event.pageX - containerRect.left;
               let y = event.pageY - containerRect.top;
   
+              // Ajustar la posición para centrar la imagen en el cursor
+              x -= this.draggableImage.offsetWidth / 2;
+              y -= this.draggableImage.offsetHeight / 2;
+  
               // Limitar la posición de la imagen para que no se salga del contenedor
               const maxX = containerRect.width - this.draggableImage.offsetWidth;
               const maxY = containerRect.height - this.draggableImage.offsetHeight;
@@ -115,7 +119,6 @@
     position: relative;
     width: 30rem; /* Ajusta el tamaño del contenedor según tus necesidades */
     height: 25rem; /* Ajusta el tamaño del contenedor según tus necesidades */
-   
   }
   
   .draggable-image {
