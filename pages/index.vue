@@ -49,7 +49,7 @@ function removeCardFromDeck() {
 #app{
   display: flex;
   justify-content: space-evenly;
-
+margin: 3rem;
 }
 body {
   background-color: #f7fdfb;

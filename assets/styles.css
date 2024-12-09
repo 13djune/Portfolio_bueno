@@ -96,7 +96,6 @@
     position: relative;
     display: flex;
     justify-content: center;
-    margin: 50px;
     width: 25rem; /* ¿Es el ancho correcto? */
     /* left: calc((100vw - 30rem) / 2); Ajuste del contenedor, ¿funciona como esperas? */
     overflow: visible; /* Las tarjetas fuera del contenedor son visibles, ¿es esto lo que quieres? */
