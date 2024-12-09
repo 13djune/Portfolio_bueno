@@ -6,6 +6,7 @@
       :card="card"
       :is-current="index === 0"
       :style="{ zIndex: getCardZIndex(index) }"
+      :zIndex="10"
       @cardAccepted="$emit('cardAccepted')"
       @cardRejected="$emit('cardRejected')"
       @cardSkipped="$emit('cardSkipped')"
@@ -27,7 +28,11 @@ export default {
     cards: {
       type: Array,
       required: true
-    }
+    },
+    zIndex: {
+    type: [String, Number],
+    default: 0 // o un valor por defecto como 0
+  }
   },
   methods: {
     getCardZIndex(index) {

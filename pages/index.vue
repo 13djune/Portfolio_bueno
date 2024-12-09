@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <Avatar/>
     <GameCardsStack
       :cards="visibleCards"
       @cardAccepted="handleCardAccepted"
@@ -45,6 +46,11 @@ function removeCardFromDeck() {
 </script>
 
 <style lang="scss" scoped >
+#app{
+  display: flex;
+  justify-content: space-evenly;
+
+}
 body {
   background-color: #f7fdfb;
   color: #062016;
