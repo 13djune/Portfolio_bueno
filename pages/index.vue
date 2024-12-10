@@ -22,7 +22,7 @@ const colorMode = useColorMode();
 
 // Definición de la propiedad reactiva
 const visibleCards = ref([
-{ id: 1, title: "Hi!! I'm Belén,", text: "a Multimedia and Graphic Designer and currently studying a Master's degree in UX/UI, in Madrid." },
+{ id: 1, title: "Hi!! I'm Belen,", text: "a Multimedia and Graphic Designer and currently studying a Master's degree in UX/UI, in Madrid." },
 { id: 2, title: "2", text: "Texto de la segunda carta." },
   {id: 3, title: "Título 3", text: "Más detalles de la tercera carta." }
 ]);

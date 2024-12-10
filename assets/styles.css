@@ -1,6 +1,34 @@
+@font-face {
+    font-family: 'Bit';
+    /* Name your font family */
+    src: url('./typo/PPNeueBit-Bold.otf');
+    /* Locate the .ttf file within your directory*/
+}
+@font-face {
+    font-family: 'Daydream';
+    /* Name your font family */
+    src: url('./typo/Daydream.ttf');
+    /* Locate the .ttf file within your directory*/
+}
+html {
+    font-size: 20px;
+    font-family: var(--texto);
+}
 /* Variables de colores */
 :root {
-    --c-white: #fff;
+    --text: #062016;
+    --background: #f7fdfb;
+    --primary: #3ed9a6;
+    --secondary: #9e99f8;
+    --accent: #3fe2f7;
+
+    --text-dark: #e1f9f0;
+    --background-dark: #020806;
+    --primary-dark: #26c08c;
+    --secondary-dark: #5229c2;
+    --accent-dark: #08aabf;
+
+
     --c-black: #000;
     --c-red-50: #8773ef;
     --c-red-25: #584a9d;
@@ -13,13 +41,15 @@
   /* Variables de tipografía */
   :root {
     --fs-h2: 1.5rem; /* 24px / 16px */
-    --fs-h1: 2rem;   /* 32px / 16px */
+    --fs-h1: 1.5rem;   /* 32px / 16px */
     --fw-bold: 700;  /* El valor original `00` estaba incorrecto */
-    --fw-light: 400;  
+    --fw-light: 400; 
+    --title: 'Daydream';
+    --texto: 'Bit'; 
 }
   body {
-    background-color: #f7fdfb;
-    color: #062016;
+    background-color: var(--background);
+    color: var(--text);
   }
   .dark-mode body {
     background-color: #020806;
@@ -36,7 +66,7 @@
     margin: auto;
     font-size: var(--fs-h2);
     font-weight: var(--fw-bold);
-    color: var(--c-white);
+    color: var(--text-dark);
     background-image: linear-gradient(-180deg, var(--primary-gradient-start) 2%, var(--primary-gradient-end) 100%);
     transform: translateY(var(--default-translation)) scale(var(--default-scale));
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -64,6 +94,7 @@
     margin: 0 0 15px;
     font-size: var(--fs-h1); /* valor original de $fs-card-title */
     font-weight: var(--fw-bold);
+    font-family: var(--title);
   }
   
   /* Estilo para el texto de la tarjeta */

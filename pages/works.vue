@@ -1,5 +1,6 @@
 <template>
     <h1>adios</h1>
+    <Grid/>
 </template>
 <script setup>
 import interact from "interactjs";
