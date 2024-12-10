@@ -10,7 +10,7 @@ const links = ref([ {
 }, {
   label: 'Contact',
   icon: 'i-pixelarticons-human-handsup',
-  to: '/otra'
+  to: '/contact'
 }])
 
 </script>

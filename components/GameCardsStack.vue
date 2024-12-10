@@ -16,7 +16,7 @@
 </template>
 
 <script>
-import GameCard from "@/components/GameCard";
+import GameCard from "./GameCard.vue";
 import "../assets/styles.css"; // Asegúrate de que tus variables CSS se importen correctamente
 
 export default {

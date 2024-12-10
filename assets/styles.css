@@ -23,7 +23,7 @@ html {
     --accent: #3fe2f7;
 
     --text-dark: #e1f9f0;
-    --background-dark: #020806;
+    --background-dark: #05140f;
     --primary-dark: #26c08c;
     --secondary-dark: #5229c2;
     --accent-dark: #08aabf;
@@ -55,6 +55,7 @@ html {
     background-color: #020806;
     color: #e1f9f0;
   }
+
   /* Estilos de la tarjeta */
   .card {
     border-radius: 15px;
@@ -132,4 +133,6 @@ html {
     overflow: visible; /* Las tarjetas fuera del contenedor son visibles, ¿es esto lo que quieres? */
   }
   
-
+  h1{
+    font-family: var(--title);
+  }

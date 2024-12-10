@@ -1,4 +1,9 @@
 <template>
+  <div id="intro">
+    <h1>Hii!! I'm Belen</h1>
+    <p>a Multimedia and Graphic Designer and currently studying a Master's degree in UX/UI, in Madrid.</p>
+
+  </div>
   <div id="app">
     <Avatar/>
     <GameCardsStack
@@ -13,7 +18,7 @@
 
 <script setup>
 import { ref } from 'vue';
-import GameCardsStack from "@/components/GameCardsStack.vue";
+import GameCardsStack from "./components/GameCardsStack.vue";
 import interact from "interactjs";
 import "../assets/styles.css"; // Asegúrate de que este archivo esté configurado correctamente
 
@@ -60,5 +65,21 @@ body {
   background-color: #020806;
   color: #e1f9f0;
 }
+h1{
+  color: #9e99f8;
+    margin: 3rem;
+    margin-bottom: 0;
+    font-size: 2rem;
 
+}
+p{
+  color: #9e99f8;
+  font-size: 1.5rem;
+}
+#intro{
+  display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
 </style>

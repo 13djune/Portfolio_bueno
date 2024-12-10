@@ -1,5 +1,5 @@
 <template>
-    <h1>adios</h1>
+    <h1>You can take a look at my projects:</h1>
     <Grid/>
 </template>
 <script setup>
@@ -18,5 +18,14 @@ body {
 .dark-mode body {
   background-color: #020806;
   color: #e1f9f0;
+}
+h1{
+  color: #9e99f8;
+    margin: 3rem;
+    margin-bottom: 0;
+    display: flex;
+    justify-content: center;
+    font-size: 2rem;
+    text-align: center;
 }
 </style>

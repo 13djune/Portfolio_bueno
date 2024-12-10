@@ -4,15 +4,16 @@ const isOpen = ref(false)
 
 <template>
   <div>
-    <UButton label="More info" @click="isOpen = true" />
+    <UButton class="info" label="View more" @click="isOpen = true"  icon="i-pixelarticons-bullseye-arrow" />
 
     <USlideover v-model="isOpen" :overlay="false">
       <UCard
-        class="flex flex-col flex-1"
+        class="flex flex-col flex-1 slide"
         :ui="{ body: { base: 'flex-1' }, ring: '', divide: 'divide-y divide-gray-100 dark:divide-gray-800' }"
       >
         <template #header>
           <UButton
+         
             color="gray"
             variant="ghost"
             size="sm"
@@ -32,4 +33,17 @@ const isOpen = ref(false)
     </USlideover>
   </div>
 </template>
-
+<style scoped>
+.info{
+    background-color:  #9e99f8;
+}
+.dark-mode .info{
+background-color:  #5229c2;
+}
+.slide{
+    background-color: #f7fdfb;
+}
+.dark-mode .slide{
+    background-color: #020806;
+}
+</style>

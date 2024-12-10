@@ -72,8 +72,11 @@ export default {
 
 <template>
   <div id="app">
+   
     <div class="flex-row">
+      
       <div class="source">
+        <p style="color: #9e99f8;">If you are bored, give a try to draw something:</p>
         <vue-drawing-canvas
           ref="VueCanvasDrawing"
           v-model:image="image"
@@ -211,6 +214,7 @@ export default {
   flex-direction: row;
   align-items: center;
     justify-content: space-around;
+    margin: 4rem;
 }
 .button-container {
   display: flex;
