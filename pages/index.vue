@@ -1,9 +1,12 @@
 <template>
   <div id="intro">
     <h1>Hii!! I'm Belen</h1>
-    <p>a Multimedia and Graphic Designer and currently studying a Master's degree in UX/UI, in Madrid.</p>
-
+    <h3>or june</h3>
+    <br>
+    <p>a Multimedia and Graphic Designer and</p>
+    <p>currently studying a Master's degree in UX/UI, in Madrid.</p>
   </div>
+
   <div id="app">
     <Avatar/>
     <GameCardsStack
@@ -72,11 +75,16 @@ h1{
     font-size: 2rem;
 
 }
+h3{
+  color: #9e99f8;
+  font-size: 1rem;
+}
 p{
   color: #9e99f8;
   font-size: 1.5rem;
 }
 #intro{
+  height: 90vh;
   display: flex;
     justify-content: center;
     flex-direction: column;

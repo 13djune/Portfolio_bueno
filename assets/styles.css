@@ -133,6 +133,6 @@ html {
     overflow: visible; /* Las tarjetas fuera del contenedor son visibles, ¿es esto lo que quieres? */
   }
   
-  h1{
+  h1, h3{
     font-family: var(--title);
   }

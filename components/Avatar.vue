@@ -118,7 +118,7 @@
   .container {
     position: relative;
     width: 30rem; /* Ajusta el tamaño del contenedor según tus necesidades */
-    height: 25rem; /* Ajusta el tamaño del contenedor según tus necesidades */
+    height: 20rem; /* Ajusta el tamaño del contenedor según tus necesidades */
   }
   
   .draggable-image {

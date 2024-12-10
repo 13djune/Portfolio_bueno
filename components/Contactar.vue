@@ -38,7 +38,7 @@ const modules = [
     <div
       v-for="(module, index) in modules"
       :key="index"
-      class="border rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105"
+      class="soci border rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105"
     >
       <a :href="module.to" target="_blank" class="block p-4">
         <div class="flex items-center mb-2">
@@ -66,6 +66,10 @@ const modules = [
 .block{
     color: #9e99f8;
     background-color: #f7fdfb;
+}
+.soci:hover{
+    border: #9e99f8 2px solid;
+    border-radius: 0.5rem;
 }
 
 </style>
