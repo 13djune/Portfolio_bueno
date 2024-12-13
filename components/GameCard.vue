@@ -174,6 +174,13 @@ export default {
 
 <style scoped>
 
+.cardTitle{
 
+  font-size: 0.9rem;
+}
+.cardText{
+
+  font-size: 1.2rem;
+}
 
 </style>

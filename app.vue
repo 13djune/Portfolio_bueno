@@ -32,7 +32,7 @@ const colorMode = useColorMode()
     color: #062016;
   }
   .dark-mode body {
-    background-color: #020806;
+    background-color: #05140f;
     color: #e1f9f0;
   }
 

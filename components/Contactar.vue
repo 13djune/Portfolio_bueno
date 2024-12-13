@@ -71,5 +71,12 @@ const modules = [
     border: #9e99f8 2px solid;
     border-radius: 0.5rem;
 }
-
+.dark-mode .block{
+    color: #5229c2;
+    background-color: #05140f;
+}
+.dark-mode .soci:hover{
+    border: #5229c2 2px solid;
+    border-radius: 0.5rem;
+}
 </style>
