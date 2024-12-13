@@ -2,7 +2,7 @@
 import { ref, defineProps, watch } from 'vue';
 
 const props = defineProps<{
-  project: { id: number, title: string, description: string, images: string[], additionalText?: string } | null;
+  project: { id: number, title: string, description: string, images: string[], additionalText?: string, link: string } | null;
 }>();
 
 const isOpen = ref(false);
@@ -44,9 +44,9 @@ const closeSlideover = () => {
         
         <!-- Carrusel de imágenes -->
         <UCarousel class="mt-4">
-          <template v-for="(image, index) in project.images" :key="index">
+          <template v-for="(images, index) in project.images" :key="index">
             <div class="carousel-slide">
-              <img :src="image" alt="Project image" class="w-full h-48 object-cover rounded-md" />
+              <img :src="images" alt="Project image" class="w-full h-48 object-cover rounded-md" />
             </div>
           </template>
         </UCarousel>
@@ -55,6 +55,15 @@ const closeSlideover = () => {
         <div v-if="project.additionalText" class="mt-4">
           <p>{{ project.additionalText }}</p>
         </div>
+        <a 
+          v-if="project.link" 
+          :href="project.link" 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          class="mt-4 inline-block text-blue-600 hover:underline font-medium"
+        >
+          Visit Project
+        </a>
       </div>
     </UCard>
   </USlideover>
@@ -74,5 +83,25 @@ const closeSlideover = () => {
   max-width: 100%;
   display: block;
   border-radius: 8px;
+}
+a {
+  color: #6e3bfc;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: #5229c2;
+}
+.dark-mode a {
+  color: #9e99f8;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.dark-mode a:hover {
+  text-decoration: underline;
+  color: #b4b0fb;
 }
 </style>

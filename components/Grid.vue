@@ -4,18 +4,18 @@ import Slideover from './Slideover.vue'; // Importa el componente Slideover
 
 // Lista de proyectos de ejemplo
 const projects = [
-  { id: 1, title: 'TALSIE', description: 'Web that would meet the needs of a product brand', images: ['https://via.placeholder.com/150', 'https://via.placeholder.com/150'], additionalText: 'This is additional text for TALSIE.' },
-  { id: 2, title: 'ALPHEGOR', description: 'Web of the final degree project of a fashion design student', images: ['https://via.placeholder.com/150', 'https://via.placeholder.com/150'], additionalText: 'This is additional text for ALPHEGOR.' },
-  { id: 3, title: 'Serenyx', description: 'An app to address mental health and emotion management needs', images: ['https://via.placeholder.com/150', 'https://via.placeholder.com/150'], additionalText: 'This is additional text for Serenyx.' },
-  { id: 4, title: 'Project 4', description: 'Details about Project 4', images: ['https://via.placeholder.com/150', 'https://via.placeholder.com/150'], additionalText: 'This is additional text for Project 4.' },
-  { id: 5, title: 'Project 5', description: 'Details about Project 5', images: ['https://via.placeholder.com/150', 'https://via.placeholder.com/150'], additionalText: 'This is additional text for Project 5.' },
-  { id: 6, title: 'Project 6', description: 'Details about Project 6', images: ['https://via.placeholder.com/150', 'https://via.placeholder.com/150'], additionalText: 'This is additional text for Project 6.' },
+  { id: 1, title: 'TALSIE', description: 'Web that would meet the needs of a product brand', images: ['https://via.placeholder.com/150', 'https://via.placeholder.com/150'], additionalText: 'This is additional text for TALSIE.', link: 'https://example.com/talsie' },
+  { id: 2, title: 'ALPHEGOR', description: 'Web of the final degree project of a fashion design student', images: ['https://via.placeholder.com/150', 'https://via.placeholder.com/150'], additionalText: 'Alphegor is a clothing brand inspired by a futuristic and different theme. Its main purpose is to provide users with an immersive experience to explore and understand the world from which Alphegor was born. On the other hand, skills and knowledge of HTML+CSS+JS, the Github repository and the Netlify programme through which the website will be synchronised and published have been used. The responsive version of the website was not created. 2024, Madrid', link: 'https://example.com/talsie' },
+  { id: 3, title: 'Serenyx', description: 'An app to address mental health and emotion management needs', images: ['https://via.placeholder.com/150', 'https://via.placeholder.com/150'], additionalText: 'This is additional text for Serenyx.', link: 'https://example.com/talsie' },
+  { id: 4, title: 'Project 4', description: 'Details about Project 4', images: ['https://via.placeholder.com/150', 'https://via.placeholder.com/150'], additionalText: 'This is additional text for Project 4.', link: 'https://example.com/talsie' },
+  { id: 5, title: 'Project 5', description: 'Details about Project 5', images: ['https://via.placeholder.com/150', 'https://via.placeholder.com/150'], additionalText: 'This is additional text for Project 5.', link: 'https://example.com/talsie' },
+  { id: 6, title: 'Project 6', description: 'Details about Project 6', images: ['https://via.placeholder.com/150', 'https://via.placeholder.com/150'], additionalText: 'This is additional text for Project 6.', link: 'https://example.com/talsie' },
 ];
 
-const activeProject = ref<{ id: number, title: string, description: string, images: string[], additionalText?: string } | null>(null);
+const activeProject = ref<{ id: number, title: string, description: string, images: string[], additionalText?: string, link: string } | null>(null);
 const isSlideoverOpen = ref(false);
 
-const openSlideover = (project: { id: number, title: string, description: string, images: string[], additionalText?: string }) => {
+const openSlideover = (project: { id: number, title: string, description: string, images: string[], additionalText?: string, link: string }) => {
   activeProject.value = project;
   isSlideoverOpen.value = true;
 };
@@ -71,4 +71,5 @@ const closeSlideover = () => {
 .dark-mode .info {
   background-color: #5229c2;
 }
+
 </style>
