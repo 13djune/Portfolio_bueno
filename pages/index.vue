@@ -30,7 +30,7 @@ const colorMode = useColorMode();
 
 // Definición de la propiedad reactiva
 const visibleCards = ref([
-{ id: 1, title: "My interests", text: "are focused on web and iteractive design, problem solving or campaign ideation and motion graphics. Also, spreading awarness about social causes, as it helps to capture people's attention and encourage their support, which is essential to generate changes in society." },
+{ id: 1, title: "I am focused", text: "on web and iteractive design, problem solving or campaign ideation and motion graphics. Also, spreading awarness about social causes, as it helps to capture people's attention and encourage their support, which is essential to generate changes in society." },
 { id: 2, title: "I consider myself", text: "a multidisciplinary person, I love to learn new things, to apply them and to contribute ideas for different projects, I would not like to fit into a single graphic discipline." },
   {id: 3, title: "Currently...", text: "I'm perfecting my technical skills to be able to develop new and complex projects, although I'm always looking to learn in all possible areas. " }
 ]);
