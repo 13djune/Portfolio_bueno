@@ -123,6 +123,9 @@ const closeSlideover = () => {
 .dark-mode .info {
   background-color: #5229c2;
 }
+ p {
+  color: #062016;
+}
 .dark-mode p {
   color: #e1f9f0;
 }

@@ -41,17 +41,6 @@ const showPreviousImage = () => {
       class="flex flex-col flex-1 slide"
       :ui="{ body: { base: 'flex-1' }, ring: '', divide: 'divide-y divide-gray-100 dark:divide-gray-800' }"
     >
-      <template #header>
-        <UButton
-          color="gray"
-          variant="ghost"
-          size="sm"
-          class="flex sm:hidden absolute end-5 top-5 z-10"
-          square
-          padded
-          @click="closeSlideover"
-        />
-      </template>
 
       <!-- Mostrar la información del proyecto -->
       <div v-if="project">
@@ -100,12 +89,18 @@ const showPreviousImage = () => {
 </template>
 
 <style scoped>
+h2{
+  font-family: 'Daydream';
+}
 .slide {
   background-color: #f7fdfb;
+  border-radius: 0;
+  border-left: #062016 1px solid;
 }
 
 .dark-mode .slide {
-  background-color: #020806;
+  background-color: #05140f;
+  border-left: #e1f9f0 1px solid;
 }
 
 .carousel img {
@@ -142,5 +137,11 @@ a:hover {
 .dark-mode a:hover {
   text-decoration: underline;
   color: #b4b0fb;
+}
+p {
+  color: #062016;
+}
+.dark-mode p {
+  color: #e1f9f0;
 }
 </style>
