@@ -59,15 +59,6 @@ function removeCardFromDeck() {
   justify-content: space-evenly;
 margin: 3rem;
 }
-body {
-  background-color: #f7fdfb;
-  color: #062016;
-}
-
-.dark-mode body {
-  background-color: #020806;
-  color: #e1f9f0;
-}
 h1{
   color: #9e99f8;
     margin: 3rem;
@@ -82,6 +73,15 @@ h3{
 p{
   color: #9e99f8;
   font-size: 1.5rem;
+}
+.dark-mode h1{
+  color: #6e3bfc;
+}
+.dark-mode p{
+  color: #6e3bfc;
+}
+.dark-mode h3{
+  color: #6e3bfc;
 }
 #intro{
   height: 90vh;

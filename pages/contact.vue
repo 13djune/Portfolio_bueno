@@ -21,12 +21,10 @@ h1{
     font-size: 2rem;
 
 }
-body {
-  background-color: #f7fdfb;
-  color: #062016;
+.dark-mode h1{
+  color: #6e3bfc;
+   
+
 }
-.dark-mode body {
-  background-color: #020806;
-  color: #e1f9f0;
-}
+
 </style>

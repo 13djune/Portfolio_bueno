@@ -34,7 +34,7 @@ html {
     --c-red-25: #584a9d;
     --c-navy: #2e2754;
     --c-text: #8285a7;
-    --primary-gradient-start: #cbc4f0;
+    --primary-gradient-start: #9d8ee5;
     --primary-gradient-end: #663dd6;
   }
   
@@ -52,8 +52,8 @@ html {
     color: var(--text);
   }
   .dark-mode body {
-    background-color: #020806;
-    color: #e1f9f0;
+    background-color: var(--background-dark);
+    color: var(--text-dark);
   }
 
   /* Estilos de la tarjeta */
@@ -83,6 +83,24 @@ html {
         z-index: 3; /* Hace que la carta activa esté sobre las demás */
         pointer-events: auto; /* Permite interacciones solo en la carta activa */
     }
+
+  
+    /* Estilo para animación */
+    &.isAnimating {
+      transition: transform 0.7s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+    }
+  }
+  .dark-mode .card {
+
+    background-image: linear-gradient(-180deg, #9474ee 2%, #5229c2 100%);
+    
+    /* Estilo específico para elementos actuales */
+    &.isCurrent {
+        opacity: 1;
+        z-index: 3; /* Hace que la carta activa esté sobre las demás */
+        pointer-events: auto; /* Permite interacciones solo en la carta activa */
+    }
+    
   
     /* Estilo para animación */
     &.isAnimating {
@@ -135,4 +153,10 @@ html {
   
   h1, h3{
     font-family: var(--title);
+  }
+  p{
+    color: #9e99f8
+  }
+  .dark-mode p{
+    color: #6e3bfc;
   }

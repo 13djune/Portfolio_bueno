@@ -76,7 +76,7 @@ export default {
     <div class="flex-row">
       
       <div class="source">
-        <p style="color: #9e99f8;">If you are bored, give a try to draw something:</p>
+        <p >If you are bored, give a try to draw something:</p>
         <vue-drawing-canvas
           ref="VueCanvasDrawing"
           v-model:image="image"
@@ -261,6 +261,9 @@ export default {
 .control-btn svg {
   width: 20px;
   height: 20px;
+}
+.dark-mode p {
+  color: #e1f9f0;
 }
 
 </style>

@@ -175,12 +175,21 @@ export default {
 <style scoped>
 
 .cardTitle{
-
+color: #e1f9f0;
   font-size: 0.9rem;
 }
 .cardText{
-
+  color: #e1f9f0;
   font-size: 1.2rem;
+}
+
+.dark-mode .cardTitle{
+color: #062016;
+
+}
+.dark-mode .cardText{
+  color: #062016;
+
 }
 
 </style>
