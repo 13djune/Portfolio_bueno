@@ -7,6 +7,9 @@
     <p>currently studying a Master's degree in UX/UI, in Madrid.</p>
   </div>
 
+  <Marquee>
+      WHO AM I? WHO AM I? WHO AM I? WHO AM I? WHO AM I? WHO AM I? WHO AM I?
+    </Marquee>
   <div id="app">
     <Avatar/>
     <GameCardsStack
@@ -24,6 +27,8 @@ import { ref } from 'vue';
 import GameCardsStack from "./components/GameCardsStack.vue";
 import interact from "interactjs";
 import "../assets/styles.css"; // Asegúrate de que este archivo esté configurado correctamente
+import Marquee from './components/Marquee.vue'; // Importar el componente
+
 
 
 const colorMode = useColorMode();
@@ -89,5 +94,6 @@ p{
     justify-content: center;
     flex-direction: column;
     align-items: center;
+
 }
 </style>

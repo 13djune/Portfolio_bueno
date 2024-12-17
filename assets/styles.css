@@ -14,6 +14,16 @@ html {
     font-size: 20px;
     font-family: var(--texto);
 }
+/* Asegúrate de que el fondo cubra toda la pantalla */
+html, body, #__nuxt {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden; /* Para evitar barras de desplazamiento */
+}
+
+/* Puedes agregar más estilos globales aquí */
+
 /* Variables de colores */
 :root {
     --text: #062016;
@@ -25,7 +35,7 @@ html {
     --text-dark: #e1f9f0;
     --background-dark: #05140f;
     --primary-dark: #26c08c;
-    --secondary-dark: #5229c2;
+    --secondary-dark: #6e3bfc;
     --accent-dark: #08aabf;
 
 
@@ -48,7 +58,7 @@ html {
     --texto: 'Bit'; 
 }
   body {
-    background-color: var(--background);
+    background-color: transparent !important;
     color: var(--text);
   }
   .dark-mode body {

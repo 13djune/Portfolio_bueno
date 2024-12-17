@@ -13,6 +13,7 @@ const colorMode = useColorMode();
 <style>
 
 h1{
+  position: relative;
   color: #9e99f8;
     margin: 3rem;
     margin-bottom: 0;
@@ -20,6 +21,7 @@ h1{
     justify-content: center;
     font-size: 2rem;
     text-align: center;
+
 }
 .dark-mode h1{
   color: #6e3bfc;

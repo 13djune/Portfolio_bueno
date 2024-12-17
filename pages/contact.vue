@@ -13,12 +13,14 @@ const colorMode = useColorMode();
 
 <style scoped>
 h1{
+  position: relative;
   color: #9e99f8;
     margin: 3rem;
     margin-bottom: 0;
     display: flex;
     justify-content: center;
     font-size: 2rem;
+
 
 }
 .dark-mode h1{

@@ -243,7 +243,7 @@ export default {
   background-color: #cdf8e8;
 }
 .dark-mode .control-btn {
-  background-color: #020806;
+  background-color: #09231a;
     padding: 5px 10px;
     font-size: 14px;
     display: flex;
@@ -256,7 +256,7 @@ export default {
 }
 
 .dark-mode .control-btn:hover {
-  background-color: #09231a;
+  background-color: #124634;
 }
 .control-btn svg {
   width: 20px;
