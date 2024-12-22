@@ -174,21 +174,47 @@ export default {
 
 <style scoped>
 
+
+.card.isCurrent {
+  pointer-events: auto;
+  opacity: 1;
+}
+
+.card.isAnimating {
+  transition: transform 0.7s ease-out, opacity 0.7s ease-out;
+}
+
+.card:nth-child(1) {
+  z-index: 3;
+  transform: translateY(0) scale(1);
+}
+
+.card:nth-child(2) {
+  z-index: 2;
+  transform: translateY(4vh) scale(0.95);
+}
+
+.card:nth-child(3) {
+  z-index: 1;
+  transform: translateY(8vh) scale(0.9);
+
+}
+
 .cardTitle{
-color: #e1f9f0;
+color: #e1f9f0 !important;
   font-size: 0.9rem;
 }
 .cardText{
-  color: #e1f9f0;
+  color: #e1f9f0 !important;
   font-size: 1.2rem;
 }
 
 .dark-mode .cardTitle{
-color: #062016;
+color: #062016 !important;
 
 }
 .dark-mode .cardText{
-  color: #062016;
+  color: #062016 !important;
 
 }
 

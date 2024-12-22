@@ -15,7 +15,8 @@ export default defineNuxtConfig({
     storageKey: 'nuxt-color-mode'
   },
   ui: {
-    global: true
+    global: true,
+
   },
   css: [
     '@/assets/styles.css' // Ruta al archivo CSS

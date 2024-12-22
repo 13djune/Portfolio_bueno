@@ -5,6 +5,7 @@
     <br>
     <p>a Multimedia and Graphic Designer and</p>
     <p>currently studying a Master's degree in UX/UI, in Madrid.</p>
+    <p>Nice to meet you :)</p>
   </div>
 
   <Marquee>
@@ -20,6 +21,17 @@
       @hideCard="removeCardFromDeck"
     />
   </div>
+  <UDivider
+icon="i-pixelarticons-anchor"
+    size="sm"
+  />
+  <div id="skills">
+    <div>
+
+      <Skills/>
+    </div>
+  </div>
+
 </template>
 
 <script setup>
@@ -37,7 +49,7 @@ const colorMode = useColorMode();
 const visibleCards = ref([
 { id: 1, title: "I am focused", text: "on web and iteractive design, problem solving or campaign ideation and motion graphics. Also, spreading awarness about social causes, as it helps to capture people's attention and encourage their support, which is essential to generate changes in society." },
 { id: 2, title: "I consider myself", text: "a multidisciplinary person, I love to learn new things, to apply them and to contribute ideas for different projects, I would not like to fit into a single graphic discipline." },
-  {id: 3, title: "Currently...", text: "I'm perfecting my technical skills to be able to develop new and complex projects, although I'm always looking to learn in all possible areas. " }
+  {id: 3, title: "Currently...", text: "I'm perfecting my technical skills to be able to develop new and complex projects, and focus on having inclusive and accessible designs. " }
 ]);
 
 // Definición de los métodos
@@ -59,6 +71,14 @@ function removeCardFromDeck() {
 </script>
 
 <style lang="scss" scoped >
+#skills{
+display: flex;
+justify-content: center;
+}
+#skills>div{
+  width: 60vw !important;
+  margin: 2rem 2rem 3rem 2rem;
+}
 #app{
   display: flex;
   justify-content: space-evenly;
@@ -96,4 +116,5 @@ p{
     align-items: center;
 
 }
+
 </style>

@@ -67,6 +67,7 @@ const modules = [
     color: #9e99f8;
     background-color: #f7fdfb;
 }
+
 .soci:hover{
     border: #9e99f8 2px solid;
     border-radius: 0.5rem;

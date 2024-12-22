@@ -117,6 +117,6 @@ export default {
   position: absolute;
   width: 150px;
   height: auto;
-  cursor: grab;
+  cursor: grab !important;
 }
 </style>

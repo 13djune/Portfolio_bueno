@@ -6,9 +6,15 @@
     <Navbar />
     <SwitchMode />
     <NuxtPage />
-
+    <div id="footer">
+    <p>Let's work together to create something unforgettable!</p>
+    <br>
+    <p>Belén (June) Castillo · updated January 2025 ©</p>
   </div>
-</template><script setup>
+  </div>
+
+</template>
+<script setup>
 import './assets/styles.css';
 import { onMounted, onBeforeUnmount, ref } from 'vue';
 
@@ -69,6 +75,14 @@ onBeforeUnmount(() => {
 });
 </script>
 <style lang="scss">
+  body {
+    background-color:#f7fdfb;
+    color:#062016;
+  }
+  .dark-mode body {
+    background-color: #05140f;
+    color:#e1f9f0;
+  }
 .main-container {
   position: relative;
   width: 100%;
@@ -82,14 +96,14 @@ onBeforeUnmount(() => {
   left: 0;
   width: 10px;
   height: 10px;
-  background-color: white;
+  background-color: #26c08c;
   border-radius: 50%;
   pointer-events: none;
-  z-index: 9999;
+  z-index: 10000;
 }
 
 #cursor-border {
-  --size: 50px;
+  --size: 70px;
   position: fixed;
   top: 0;
   left: 0;
@@ -99,7 +113,14 @@ onBeforeUnmount(() => {
   pointer-events: none;
   transition: top 0.15s ease-out, left 0.15s ease-out, width 0.15s ease-out,
     height 0.15s ease-out, background-color 0.15s ease-out;
-  z-index: 9999;
+    z-index: 10000;
   background: radial-gradient(circle, #3ed9a6 20%, #f7fdfb 60%);
+}
+#footer {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin: 3rem;
 }
 </style>

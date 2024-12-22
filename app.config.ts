@@ -77,7 +77,7 @@ declare module '@nuxt/schema' {
 
 export default defineAppConfig({
   ui: {
-   
+    primary: 'indigo',
     navigationMenu: {
       slots: {
         root: 'relative flex gap-1.5 [&>div]:min-w-0',
@@ -246,7 +246,7 @@ export default defineAppConfig({
           }
         },
         {
-          color: 'primary',
+          color: 'customPrimary',
           variant: 'pill',
           active: true,
           class: {
@@ -298,7 +298,7 @@ export default defineAppConfig({
           }
         },
         {
-          color: 'primary',
+          color: 'customPrimary',
           variant: 'link',
           active: true,
           class: {

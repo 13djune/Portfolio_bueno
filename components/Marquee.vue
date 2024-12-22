@@ -32,7 +32,7 @@
     border: #9e99f8 3px solid;
     border-left: 0;
     border-right: 0 ;
-    z-index: 0;
+    z-index: -1;
   }
  .dark-mode .marquee-wrapper {
     background: #05140f;

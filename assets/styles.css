@@ -10,21 +10,25 @@
     src: url('./typo/Daydream.ttf');
     /* Locate the .ttf file within your directory*/
 }
+
 html {
     font-size: 20px;
     font-family: var(--texto);
 }
-/* Asegúrate de que el fondo cubra toda la pantalla */
+
 html, body, #__nuxt {
   height: 100%;
   margin: 0;
   padding: 0;
-  overflow: hidden; /* Para evitar barras de desplazamiento */
+  overflow: hidden; 
+}
+*{
+  cursor: none;
+}
+* .dark-mode{
+  cursor: none;
 }
 
-/* Puedes agregar más estilos globales aquí */
-
-/* Variables de colores */
 :root {
     --text: #062016;
     --background: #f7fdfb;
@@ -39,11 +43,7 @@ html, body, #__nuxt {
     --accent-dark: #08aabf;
 
 
-    --c-black: #000;
-    --c-red-50: #8773ef;
-    --c-red-25: #584a9d;
-    --c-navy: #2e2754;
-    --c-text: #8285a7;
+  
     --primary-gradient-start: #9d8ee5;
     --primary-gradient-end: #663dd6;
   }
@@ -58,7 +58,7 @@ html, body, #__nuxt {
     --texto: 'Bit'; 
 }
   body {
-    background-color: transparent !important;
+    background-color: var(--background) ;
     color: var(--text);
   }
   .dark-mode body {
@@ -68,6 +68,7 @@ html, body, #__nuxt {
 
   /* Estilos de la tarjeta */
   .card {
+    cursor: grab !important;
     border-radius: 15px;
     box-shadow: 0 30px 30px 0 rgba(0, 0, 0, 0.05);
     display: flex;
@@ -80,7 +81,7 @@ html, body, #__nuxt {
     color: var(--text-dark);
     background-image: linear-gradient(-180deg, var(--primary-gradient-start) 2%, var(--primary-gradient-end) 100%);
     transform: translateY(var(--default-translation)) scale(var(--default-scale));
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
     user-select: none;
     pointer-events: none;
     will-change: transform, opacity;
@@ -99,6 +100,12 @@ html, body, #__nuxt {
     &.isAnimating {
       transition: transform 0.7s cubic-bezier(0.68, -0.55, 0.27, 1.55);
     }
+  }
+  .card:hover{
+    cursor: grab !important;
+  }
+  .cards:hover{
+    cursor: grab !important;
   }
   .dark-mode .card {
 
@@ -153,6 +160,7 @@ html, body, #__nuxt {
  
   
   .cards {
+    cursor: grab !important;
     position: relative;
     display: flex;
     justify-content: center;
@@ -165,8 +173,8 @@ html, body, #__nuxt {
     font-family: var(--title);
   }
   p{
-    color: #9e99f8
+    color: #9e99f8 !important;
   }
   .dark-mode p{
-    color: #6e3bfc;
+    color: #6e3bfc !important;
   }

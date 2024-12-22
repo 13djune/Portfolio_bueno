@@ -56,9 +56,6 @@ importers:
       supports-color:
         specifier: ^9.4.0
         version: 9.4.0
-      tailwindcss:
-        specifier: ^3.4.15
-        version: 3.4.15
       typeit:
         specifier: ^8.8.7
         version: 8.8.7
@@ -87,6 +84,9 @@ importers:
       sass-loader:
         specifier: ^13.0.0
         version: 13.3.3(sass-embedded@1.81.1)(sass@1.81.1)(webpack@5.97.0(esbuild@0.24.0))
+      tailwindcss:
+        specifier: ^3.4.15
+        version: 3.4.15
 
 packages:
 
