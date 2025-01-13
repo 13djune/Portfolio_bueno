@@ -20,7 +20,7 @@ const links = ref([ {
   highlight
   orientation="vertical"
     :links="links" 
-    class="justify-center" style="width: 7rem; position: fixed; left: 0; top: 50%; z-index: 9999;"/>
+    class="justify-center menu" style="width: 7rem; position: fixed; left: 0; top: 50%; z-index: 9999;"/>
 
 </template>
 

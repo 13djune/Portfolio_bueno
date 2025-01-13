@@ -24,7 +24,7 @@ const items = [{
 </script>
 
 <template>
-  <UAccordion multiple :items="items"
+  <UAccordion class="acordeon" :items="items"
   open-icon="i-pixelarticons-plus"
     close-icon="i-pixelarticons-minus">
     <template #item="{ item }">

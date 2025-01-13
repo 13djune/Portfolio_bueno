@@ -65,7 +65,7 @@ const modules = [
 }
 .block{
     color: #9e99f8;
-    background-color: #f7fdfb;
+    background-color: #bcfeeb64 !important;
 }
 
 .soci:hover{
@@ -74,7 +74,8 @@ const modules = [
 }
 .dark-mode .block{
     color: #6e3bfc;
-    background-color: #05140f;
+   
+    background-color: #22866531  !important;
 }
 .dark-mode .soci:hover{
     border: #6e3bfc 2px solid;

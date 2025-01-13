@@ -65,7 +65,50 @@ html, body, #__nuxt {
     background-color: var(--background-dark);
     color: var(--text-dark);
   }
+  /* Acordeon */
+  .acordeon>div>button {
+    background-color: #e3fbf4 !important;
+    color: #9e99f8 !important;
+  }
+  .dark-mode .acordeon>div>button {
+    background-color: #0b2c21 !important;
+    color: var(--text-dark) !important;
+  }
+  /* MENU */
+   .menu>ul>li>a {
 
+    color: var(--text) !important;
+  }
+ .menu>ul>li>a:hover {
+    color: var(--text) !important;
+  }
+
+ .menu>ul>li>a>span {
+    color: var(--text) !important;
+  }
+  .before\:bg-gray-100::before{
+    background-color: #bcfeeb !important;
+  }
+  .menu>ul>li>a:hover:before{
+    background-color: #bcfeeb64 !important;
+
+  }
+  .dark-mode .menu>ul>li>a:hover:before{
+    background-color: #2286655c  !important;
+  }
+  .dark-mode .menu>ul>li>a {
+
+    color: var(--text-dark) !important;
+  }
+  .dark-mode .menu>ul>li>a:hover {
+    color: var(--text) !important;
+  }
+  .dark-mode .menu>ul>li>a>span {
+    color: var(--text-dark) !important;
+  }
+  .dark-mode .before\:bg-gray-100::before{
+    background-color: #228665 !important;
+  }
   /* Estilos de la tarjeta */
   .card {
     cursor: grab !important;
