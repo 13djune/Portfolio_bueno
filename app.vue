@@ -132,8 +132,8 @@ onBeforeUnmount(() => {
   pointer-events: none;
   transition: top 0.15s ease-out, left 0.15s ease-out, width 0.15s ease-out,
     height 0.15s ease-out, background-color 0.15s ease-out;
-    z-index: 10000;
-  background: radial-gradient(circle, #3ed9a6 20%, #f7fdfb 60%);
+    z-index: 9999;
+  background: radial-gradient(circle, #3ed9a6 10%, #3ed9a500 60%);
 }
 #footer {
     display: flex;
@@ -141,5 +141,8 @@ onBeforeUnmount(() => {
     flex-direction: column;
     align-items: center;
     margin: 3rem;
+}
+#footer>p {
+    text-align: center;
 }
 </style>

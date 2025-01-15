@@ -52,6 +52,7 @@ html, body, #__nuxt {
   :root {
     --fs-h2: 1.5rem; /* 24px / 16px */
     --fs-h1: 1.5rem;   /* 32px / 16px */
+  
     --fw-bold: 700;  /* El valor original `00` estaba incorrecto */
     --fw-light: 400; 
     --title: 'Daydream';
@@ -221,3 +222,86 @@ html, body, #__nuxt {
   .dark-mode p{
     color: #6e3bfc !important;
   }
+@media screen and (max-width: 425px) {
+
+  .cardTitle {
+
+    font-size: 0.6rem !important; /* valor original de $fs-card-title */
+    
+  }
+  
+  /* Estilo para el texto de la tarjeta */
+  .cardText {
+    
+    font-size: 0.8rem !important;
+
+  }
+  #app{
+    flex-direction: column;
+  }
+  .cards {
+    width: 13rem;
+    height: 20rem;
+  }
+  .container {
+    width: auto !important;
+    height: 60vh !important;
+}
+h1{
+  font-size: 1rem !important;
+}
+p{
+  font-size: 0.875rem !important;
+}
+.grid {
+  margin: 4rem !important;
+}
+.grid>div {
+  width: 55vw !important;
+}
+.socials {
+  margin: 3rem !important;
+}
+}
+/* TABLET */
+@media screen and (max-width: 768px) {
+
+  .cardTitle {
+
+    font-size: 0.8rem !important; /* valor original de $fs-card-title */
+    
+  }
+  
+  /* Estilo para el texto de la tarjeta */
+  .cardText {
+    
+    font-size: 1rem !important;
+
+  }
+  #app{
+    flex-direction: column;
+  }
+  .cards {
+    width: 28rem;
+    height: 20rem;
+  }
+  .container {
+    width: auto !important;
+    height: 60vh !important;
+}
+h1{
+  font-size: 1.7rem !important;
+}
+p{
+  font-size: 0.95rem !important;
+}
+.grid {
+  margin: 4rem !important;
+}
+.grid>div {
+  width: 55vw !important;
+}
+.socials {
+  margin: 4rem ;
+}
+}

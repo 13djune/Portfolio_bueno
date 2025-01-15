@@ -120,23 +120,23 @@ h2{
 }
 
 a {
-  color: #6e3bfc;
+  color: #3fe2f7;
   font-weight: 500;
   transition: color 0.2s ease;
 }
 
 a:hover {
   text-decoration: underline;
-  color: #5229c2;
+  color: #08aabf;
 }
 .dark-mode a {
-  color: #9e99f8;
+  color: #08aabf;
   font-weight: 500;
 }
 
 .dark-mode a:hover {
   text-decoration: underline;
-  color: #b4b0fb;
+  color: #3fe2f7;
 }
 p {
   color: #062016;
