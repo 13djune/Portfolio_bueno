@@ -14,9 +14,10 @@
   </div>
 
 </template>
+
 <script setup>
 import './assets/styles.css';
-import { onMounted, onBeforeUnmount, ref } from 'vue';
+import { onMounted, onBeforeUnmount, ref, nextTick } from 'vue';
 
 const cursorPos = ref({ x: 0, y: 0 });
 const cursorBorderPos = ref({ x: 0, y: 0 });
@@ -30,15 +31,11 @@ function updateCursorPosition(event) {
   cursorPos.value.y = event.clientY;
 
   if (cursor.value) {
-    // Mover el cursor principal, centrado
     cursor.value.style.transform = `translate(${cursorPos.value.x - cursor.value.offsetWidth / 2}px, ${cursorPos.value.y - cursor.value.offsetHeight / 2}px)`;
   }
 
   if (cursorBorder.value) {
-    // Mover el borde del cursor, centrado
     cursorBorder.value.style.transform = `translate(${cursorPos.value.x - cursorBorder.value.offsetWidth / 2}px, ${cursorPos.value.y - cursorBorder.value.offsetHeight / 2}px)`;
-    // Actualizar el fondo de gradiente, centrado en el borde
-    cursorBorder.value.style.background = `radial-gradient(circle, #3ed9a6 0%, rgba(255, 255, 255, 0) 60%)`;
   }
 }
 
@@ -49,21 +46,41 @@ function animateCursorBorder() {
       cursorBorderPos.value.x += (cursorPos.value.x - cursorBorderPos.value.x) / easting;
       cursorBorderPos.value.y += (cursorPos.value.y - cursorBorderPos.value.y) / easting;
 
-      // Mantener el borde del cursor centrado
       cursorBorder.value.style.transform = `translate(${cursorBorderPos.value.x - cursorBorder.value.offsetWidth / 2}px, ${cursorBorderPos.value.y - cursorBorder.value.offsetHeight / 2}px)`;
     }
     animateCursorBorder(); // Llamada recursiva para mantener la animación
   });
 }
 
+// Delegación de eventos para hover en elementos con clase "info", "soci" y "card"
+function handleHover(event) {
+  const target = event.target;
+
+  if (target.classList.contains('info') || target.classList.contains('soci') || target.classList.contains('card')) {
+    if (event.type === 'mouseenter') {
+      cursorBorder.value.style.mixBlendMode = 'difference';
+      cursorBorder.value.style.background = '#3ed9a6'; // Fondo sólido
+    } else if (event.type === 'mouseleave') {
+      cursorBorder.value.style.mixBlendMode = 'normal';
+      cursorBorder.value.style.background = `radial-gradient(circle, #3ed9a6 0%, rgba(255, 255, 255, 0) 60%)`; // Restaurar gradiente
+    }
+  }
+}
+
 // Montaje del componente
-onMounted(() => {
+onMounted(async () => {
+  await nextTick();
+
   // Obtener los elementos del DOM
   cursor.value = document.querySelector("#cursor");
   cursorBorder.value = document.querySelector("#cursor-border");
 
   // Agregar el evento de movimiento del ratón
   document.addEventListener("mousemove", updateCursorPosition);
+
+  // Delegar eventos hover en el documento
+  document.addEventListener("mouseenter", handleHover, true);
+  document.addEventListener("mouseleave", handleHover, true);
 
   // Iniciar la animación del borde del cursor
   animateCursorBorder();
@@ -72,6 +89,8 @@ onMounted(() => {
 // Desmontaje del componente
 onBeforeUnmount(() => {
   document.removeEventListener("mousemove", updateCursorPosition);
+  document.removeEventListener("mouseenter", handleHover, true);
+  document.removeEventListener("mouseleave", handleHover, true);
 });
 </script>
 <style lang="scss">

@@ -74,6 +74,7 @@ const closeSlideover = () => {
   isSlideoverOpen.value = false;
   activeProject.value = null;
 };
+
 </script>
 
 <template>
