@@ -222,6 +222,30 @@ html, body, #__nuxt {
   .dark-mode p{
     color: #6e3bfc !important;
   }
+  .rana{
+    width: 8rem;
+
+  }
+  .gato{
+    width: 5rem;
+
+  }
+  .gatito{
+    display: flex
+;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
+  }
+  .planta{
+    width: 6rem;
+margin-top: 2rem;
+  }
+  .work{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 @media screen and (max-width: 425px) {
 
   .cardTitle {

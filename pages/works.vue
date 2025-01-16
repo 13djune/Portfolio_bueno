@@ -1,5 +1,8 @@
 <template>
+  <div class="work">
+    <img src="assets/img/plantita.gif" class="planta">
     <h1>You can take a look at my projects:</h1>
+  </div>
     <Grid/>
 </template>
 <script setup>

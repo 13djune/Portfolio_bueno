@@ -74,9 +74,12 @@ export default {
   <div id="app">
    
     <div class="flex-row">
-      
       <div class="source">
-        <p >If you are bored, give a try to draw something:</p>
+        <div class="gatito">
+          <p >If you are bored, give a try to draw something:</p>
+          <img src="assets/img/gatito.gif" class="gato">     
+
+  </div>
         <vue-drawing-canvas
           ref="VueCanvasDrawing"
           v-model:image="image"

@@ -21,10 +21,12 @@
       @hideCard="removeCardFromDeck"
     />
   </div>
-  <UDivider
-icon="i-pixelarticons-anchor"
-    size="sm"
-  />
+  <UDivider  size="sm">
+<img src="assets/img/ranita.png" class="rana">
+  </UDivider>
+
+
+  
   <div id="skills">
     <div>
 
