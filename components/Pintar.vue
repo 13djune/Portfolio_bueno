@@ -167,13 +167,18 @@ export default {
   align-items: center;
   justify-content: center;
 }
+.dark-mode .control-btn {
+    background-color: #0f3e2f;
+}
 .bg-btn{
   font-size: 14px !important;
 }
 .control-btn:hover {
   background-color: #cdf8e8;
 }
-
+.dark-mode .control-btn:hover {
+  background-color: #207e60;
+}
 /* Ajustes responsivos */
 @media screen and (max-width: 768px) {
   .control-btn {
