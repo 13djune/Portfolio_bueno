@@ -1,7 +1,12 @@
 <template>
-     <h1>Feel free to contact me:</h1>
+  <div id="contact">
+    <h1>Feel free to contact me:</h1>
+    <img src="assets/img/corazon.gif" alt="Crystal heart in pixel art filling up" class="cora">
+
+  </div>
 <Contactar/>
     <Pintar/>
+
 </template>
 <script setup>
 import interact from "interactjs";

@@ -61,7 +61,7 @@ const modules = [
     justify-content: center;
     align-items: center;
     flex-direction: row;
-    margin: 6rem;
+    margin: 3rem 6rem    ;
 }
 .block{
     color: #9e99f8;

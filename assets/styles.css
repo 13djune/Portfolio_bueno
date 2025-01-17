@@ -212,9 +212,16 @@ html, body, #__nuxt {
     /* left: calc((100vw - 30rem) / 2); Ajuste del contenedor, ¿funciona como esperas? */
     overflow: visible; /* Las tarjetas fuera del contenedor son visibles, ¿es esto lo que quieres? */
   }
-  
+  #app{
+    display: flex;
+    justify-content: space-evenly;
+  margin: 3rem;
+
+  }
   h1, h3{
     font-family: var(--title);
+    text-align: center;
+
   }
   p{
     color: #9e99f8 !important;
@@ -222,6 +229,20 @@ html, body, #__nuxt {
   .dark-mode p{
     color: #6e3bfc !important;
   }
+  .cerrar{
+    color: #9e99f8 !important;
+  }
+  .cerrar:hover{
+    color: #6e3bfc !important;
+  }
+  .dark-mode .cerrar{
+    color: #6e3bfc !important;
+    background-color: #2286655c;
+  }
+  .cerrar:hover{
+    color: #9e99f8 !important;
+  }
+  /* PIXEL ART  */
   .rana{
     width: 8rem;
 
@@ -231,11 +252,12 @@ html, body, #__nuxt {
 
   }
   .gatito{
-    display: flex
-;
+    display: flex;
     flex-direction: row;
     align-items: flex-end;
     justify-content: space-between;
+    width: 100%;
+
   }
   .planta{
     width: 6rem;
@@ -246,6 +268,40 @@ margin-top: 2rem;
     flex-direction: column;
     align-items: center;
   }
+  .burbujas{
+    width: 6rem;
+    position: absolute;
+    top: 11rem;
+    left: 7rem;
+  }
+  .ordena{
+    width: 6rem;
+    position: absolute;
+    bottom: 8rem;
+    right: 7rem;
+  }
+  .cereza{
+    width: 6rem;
+    position: absolute;
+    bottom: -35rem;
+    right: 7rem;
+  }
+  .cora{
+    width: 6rem;
+   margin: 1rem;
+  }
+  #contact{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  @media screen and (max-width: 550px) {
+    .cereza {
+      width: 3rem !important;
+      bottom: -52rem !important;
+      right: 2rem !important;
+    }
+  }
 @media screen and (max-width: 425px) {
 
   .cardTitle {
@@ -253,7 +309,16 @@ margin-top: 2rem;
     font-size: 0.6rem !important; /* valor original de $fs-card-title */
     
   }
-  
+  .ordena {
+   
+    bottom: 8rem;
+    right: 3rem;
+}
+.planta{
+  width: 3rem;
+
+}
+
   /* Estilo para el texto de la tarjeta */
   .cardText {
     
@@ -264,8 +329,8 @@ margin-top: 2rem;
     flex-direction: column;
   }
   .cards {
-    width: 13rem;
-    height: 20rem;
+    width: 13rem !important;
+    height: 20rem !important;
   }
   .container {
     width: auto !important;
@@ -288,31 +353,50 @@ p{
 }
 }
 /* TABLET */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 950px) {
+  #app{
+   
+  align-items: center;
+  
+  }
+  .cereza {
+    width: 4rem;
+    bottom: -70rem;
+    right: 4rem;
+}
+.planta{
+  width: 5rem;
 
+}
+.gato{
+  width: 3rem;
+
+}
+.burbujas {
+  width: 5rem;
+  top: 7rem;
+  left: 7rem;
+}
   .cardTitle {
 
-    font-size: 0.8rem !important; /* valor original de $fs-card-title */
+    font-size: 0.8rem; /* valor original de $fs-card-title */
     
   }
   
   /* Estilo para el texto de la tarjeta */
   .cardText {
     
-    font-size: 1rem !important;
+    font-size: 1rem;
 
   }
   #app{
     flex-direction: column;
   }
   .cards {
-    width: 28rem;
+    width: 20rem;
     height: 20rem;
   }
-  .container {
-    width: auto !important;
-    height: 60vh !important;
-}
+ 
 h1{
   font-size: 1.7rem !important;
 }

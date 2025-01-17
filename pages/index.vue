@@ -1,5 +1,7 @@
 <template>
-  <div id="intro">
+  <div id="intro" >
+  <img src="assets/img/burbujas.gif" alt="Two bubbles in pixel art" class="burbujas">
+  <img src="assets/img/ordena.png" alt="Old PC computer in pixel art in isometric" class="ordena">
     <h1>Hii!! I'm Belen</h1>
     <h3>or june</h3>
     <br>
@@ -22,7 +24,7 @@
     />
   </div>
   <UDivider  size="sm">
-<img src="assets/img/ranita.png" class="rana">
+<img src="assets/img/ranita.png" alt="Cute frog in pixel art static" class="rana">
   </UDivider>
 
 
@@ -81,11 +83,7 @@ justify-content: center;
   width: 60vw !important;
   margin: 2rem 2rem 3rem 2rem;
 }
-#app{
-  display: flex;
-  justify-content: space-evenly;
-margin: 3rem;
-}
+
 h1{
   color: #9e99f8;
     margin: 3rem;

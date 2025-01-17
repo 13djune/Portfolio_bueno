@@ -3,7 +3,7 @@
     <img
       ref="draggableImage"
       src="../assets/img/avatar.png"
-      alt="Imagen rebotante"
+      alt="An avatar of the owner in pixel art bouncing in a container"
       class="draggable-image"
     />
   </div>

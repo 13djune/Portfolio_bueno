@@ -10,6 +10,8 @@
     <p>Let's work together to create something unforgettable!</p>
     <br>
     <p>Belén (June) Castillo · updated January 2025 ©</p>
+    <br>
+    <p>Pixel art: <a id="marina" href="https://marinamartinprieto.cargo.site/">Marina Martín (Concept Artist)</a></p>
   </div>
   </div>
 
@@ -144,5 +146,14 @@ onBeforeUnmount(() => {
 }
 #footer>p {
     text-align: center;
+}
+#marina:hover{
+  color: #3fe2f7;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.dark-mode #marina:hover{
+  color: #08aabf;
+ 
 }
 </style>
