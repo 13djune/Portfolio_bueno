@@ -1,5 +1,11 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+  head: {
+    title: 'Belen Castillo',
+    link: [
+      { rel: 'icon', type: 'image/x-icon', href: 'public/favicon.png' }
+    ]
+  },
   compatibilityDate: '2024-11-01',
   devtools: { enabled: true },
   modules: ['@nuxtjs/color-mode', '@nuxt/ui'],

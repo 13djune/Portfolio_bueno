@@ -26,7 +26,9 @@ const cursorBorderPos = ref({ x: 0, y: 0 });
 const cursorBorder = ref(null);
 const cursor = ref(null);
 const easting = 8; // Velocidad de movimiento del borde del cursor
-
+useSeoMeta({
+  ogImage: '/favicon.png'
+})
 // Función para actualizar la posición del cursor
 function updateCursorPosition(event) {
   cursorPos.value.x = event.clientX;

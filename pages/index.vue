@@ -75,6 +75,7 @@ function removeCardFromDeck() {
 </script>
 
 <style lang="scss" scoped >
+
 #skills{
 display: flex;
 justify-content: center;
