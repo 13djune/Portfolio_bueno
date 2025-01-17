@@ -303,7 +303,11 @@ margin-top: 2rem;
     }
   }
 @media screen and (max-width: 425px) {
-
+.burbujas{
+  width: 3rem;
+  top: 5rem;
+  left: 5rem;
+}
   .cardTitle {
 
     font-size: 0.6rem !important; /* valor original de $fs-card-title */
@@ -311,7 +315,7 @@ margin-top: 2rem;
   }
   .ordena {
    
-    bottom: 8rem;
+    bottom: 5rem;
     right: 3rem;
 }
 .planta{
@@ -327,6 +331,13 @@ margin-top: 2rem;
   }
   #app{
     flex-direction: column;
+    height: 100%;
+  }
+  #cursor{
+    display: none;
+  }
+  #cursor-border{
+    display: none;
   }
   .cards {
     width: 13rem !important;
