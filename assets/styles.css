@@ -301,6 +301,9 @@ margin-top: 2rem;
       bottom: -52rem !important;
       right: 2rem !important;
     }
+    .avatar{
+      width: 80px;
+    }
   }
 @media screen and (max-width: 425px) {
 .burbujas{
