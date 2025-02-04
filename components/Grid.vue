@@ -79,7 +79,6 @@ const projects = [
     additionalText: 'Este proyecto propone mejorar la comunicación en la escuela mediante una plataforma interactiva que optimiza el flujo de información y facilita la interacción entre estudiantes, docentes y personal administrativo. Al eliminar barreras comunicativas, se busca fortalecer el sentido de comunidad, promover la colaboración y crear un entorno más accesible e inclusivo para todos.',
     link: 'https://www.figma.com/proto/uuG3XtsRYQMQWLjQuyCamD/Prototipo_MDI?page-id=0%3A1&node-id=1-5524&viewport=-80%2C3%2C0.09&t=QyauFSjmlurNHo3z-1&scaling=scale-down-width&content-scaling=fixed' },
 
-     },
 
 ];
 
