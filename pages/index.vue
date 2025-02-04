@@ -44,11 +44,7 @@ import GameCardsStack from "./components/GameCardsStack.vue";
 import interact from "interactjs";
 import "../assets/styles.css"; // Asegúrate de que este archivo esté configurado correctamente
 import Marquee from './components/Marquee.vue'; // Importar el componente
-import VueKonva from 'vue-konva';
 
-const app = createApp(App);
-app.use(VueKonva);
-app.mount('#app');
 
 
 
