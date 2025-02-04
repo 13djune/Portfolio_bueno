@@ -14,7 +14,12 @@ import talsie4 from '../assets/img/TALSIE4.png';
 
 import serenyx1 from '../assets/img/Serenyx1.png';
 import serenyx2 from '../assets/img/Serenyx2.png';
+
 import enstock from '../assets/img/EN_STOCK.mp4';
+
+import ESDMeet1 from '../assets/img/Comunidades_landing.png'
+import ESDMeet2 from '../assets/img/Desktop_Feed_Chat.png'
+import ESDMeet3 from '../assets/img/Desktop_Feed.png'
 
 
 // Lista de proyectos con imágenes locales
@@ -63,7 +68,16 @@ const projects = [
     ],
     additionalText: 'The magazine is intended to be a collection, dealing with different concerns that we may have in the creative or artistic world, and at the same time using a food that can be similar to the theme. This volume deals with uncertainty and is linked to red cabbage.',
      },
- 
+     { id: 5, 
+    title: 'ESDMeet', 
+    description: 'A digital platform to optimise communication and strengthen the school community.', 
+    media: [
+    { type: 'image', src: ESDMeet1 },
+    { type: 'image', src: ESDMeet2 },
+    { type: 'image', src: ESDMeet3 }
+    ],
+    additionalText: 'Este proyecto propone mejorar la comunicación en la escuela mediante una plataforma interactiva que optimiza el flujo de información y facilita la interacción entre estudiantes, docentes y personal administrativo. Al eliminar barreras comunicativas, se busca fortalecer el sentido de comunidad, promover la colaboración y crear un entorno más accesible e inclusivo para todos.',
+     },
 
 ];
 
