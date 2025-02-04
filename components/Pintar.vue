@@ -33,29 +33,41 @@
         <!-- Primera fila de botones -->
         <div class="button-container">
           <button class="control-btn" @click.prevent="disabled = !disabled">
-            <span v-if="!disabled">Unlock</span>
-            <span v-else>Lock</span>
+            <span v-if="!disabled">  <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="M15 2H9v2H7v2h2V4h6v4H4v14h16V8h-3V4h-2zm0 8h3v10H6V10zm-2 3h-2v4h2z"></path></svg>
+              Unlock</span>
+            <span v-else>  <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="M15 2H9v2H7v4H4v14h16V8h-3V4h-2zm0 2v4H9V4zm-6 6h9v10H6V10zm4 3h-2v4h2z"></path></svg>
+              Lock</span>
           </button>
-          <button class="control-btn" @click.prevent="$refs.VueCanvasDrawing.undo()">Undo</button>
-          <button class="control-btn" @click.prevent="$refs.VueCanvasDrawing.redo()">Redo</button>
-          <button class="control-btn" @click.prevent="$refs.VueCanvasDrawing.redraw()">Refresh</button>
-          <button class="control-btn" @click.prevent="$refs.VueCanvasDrawing.reset()">Reset</button>
+          <button class="control-btn" @click.prevent="$refs.VueCanvasDrawing.undo()">
+            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="M8 4h2v2H8zm10 6V8H8V6H6v2H4v2h2v2h2v2h2v-2H8v-2zm0 8v-8h2v8zm0 0v2h-6v-2z"></path></svg>
+            Undo</button>
+          <button class="control-btn" @click.prevent="$refs.VueCanvasDrawing.redo()">
+            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="M16 4h-2v2h2v2H6v2H4v8h2v2h6v-2H6v-8h10v2h-2v2h2v-2h2v-2h2V8h-2V6h-2z"></path></svg>
+            Redo</button>
+          <button class="control-btn" @click.prevent="$refs.VueCanvasDrawing.redraw()">  <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="M16 2h-2v2h2v2H4v2H2v5h2V8h12v2h-2v2h2v-2h2V8h2V6h-2V4h-2zM6 20h2v2h2v-2H8v-2h12v-2h2v-5h-2v5H8v-2h2v-2H8v2H6v2H4v2h2z"></path></svg>
+            Refresh</button>
+          <button class="control-btn" @click.prevent="$refs.VueCanvasDrawing.reset()">
+            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="M16 2v4h6v2h-2v14H4V8H2V6h6V2zm-2 2h-4v2h4zm0 4H6v12h12V8zm-5 2h2v8H9zm6 0h-2v8h2z"></path></svg>
+            Reset</button>
         </div>
 
         <!-- Segunda fila de botones -->
         <div class="button-container">
           <button class="control-btn" @click.prevent="fillShape = !fillShape">
-            <span v-if="fillShape">Fill</span>
+            <span v-if="fillShape">  <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="M9 2h2v2H9zm4 4V4h-2v2H9v2H7v2H5v2H3v2h2v2h2v2h2v2h2v2h2v-2h2v-2h2v-2h2v6h2V12h-2v-2h-2V8h-2V6zm0 0v2h2v2h2v2h2v2H5v-2h2v-2h2V8h2V6z"></path></svg>
+              Fill</span>
             <span v-else>Stroke</span>
           </button>
           <button class="control-btn" @click.prevent="eraser = !eraser">
-            <span v-if="eraser">Eraser</span>
-            <span v-else>Draw</span>
+            <span v-if="eraser">  <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="M2 5h20v14H2zm2 2v10h2V7zm4 0v10h12V7z"></path></svg>
+              Eraser</span>
+            <span v-else>  <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="M18 2h-2v2h-2v2h-2v2h-2v2H8v2H6v2H4v2H2v6h6v-2h2v-2h2v-2h2v-2h2v-2h2v-2h2V8h2V6h-2V4h-2zm0 8h-2v2h-2v2h-2v2h-2v2H8v-2H6v-2h2v-2h2v-2h2V8h2V6h2v2h2zM6 16H4v4h4v-2H6z"></path></svg>
+              Draw</span>
           </button>
           <select v-model="line" class="control-btn">
             <option v-for="n in 25" :key="'option-' + n" :value="n">{{ n }}</option>
           </select>
-          <input type="color" v-model="color" class="control-btn" />
+          <input type="color" v-model="color" class="control-btn" style="height: auto; width: 3rem;"/>
           <select v-model="strokeType" class="control-btn">
             <option value="dash">FreeHand</option>
             <option value="line">StraightLine</option>
@@ -166,6 +178,12 @@ export default {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.control-btn>span {
+    display: flex
+;
+    justify-content: center;
+    align-items: center;
 }
 .dark-mode .control-btn {
     background-color: #0f3e2f;
