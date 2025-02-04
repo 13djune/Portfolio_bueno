@@ -24,6 +24,7 @@
     "aos": "^2.3.4",
     "esbuild": "^0.24.0",
     "interactjs": "^1.10.27",
+    "konva": "^9.3.18",
     "nuxt": "^3.14.1592",
     "pixelarticons": "^1.8.1",
     "signature_pad": "^5.0.4",
@@ -32,6 +33,7 @@
     "vite": "^5.4.11",
     "vue": "latest",
     "vue-drawing-canvas": "^1.0.14",
+    "vue-konva": "^3.2.0",
     "vue-router": "latest",
     "vue-signature-pad": "^3.0.2"
   },

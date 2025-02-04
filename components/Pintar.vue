@@ -53,11 +53,23 @@
 
         <!-- Segunda fila de botones -->
         <div class="button-container">
-          <button class="control-btn" @click.prevent="fillShape = !fillShape">
-            <span v-if="fillShape">  <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="M9 2h2v2H9zm4 4V4h-2v2H9v2H7v2H5v2H3v2h2v2h2v2h2v2h2v2h2v-2h2v-2h2v-2h2v6h2V12h-2v-2h-2V8h-2V6zm0 0v2h2v2h2v2h2v2H5v-2h2v-2h2V8h2V6z"></path></svg>
-              Fill</span>
-            <span v-else>Stroke</span>
-          </button>
+          <button class="control-btn" @click.prevent="toggleFillMode">
+  <span v-if="fillShape">
+    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+      <path fill="currentColor" d="M9 2h2v2H9zm4 4V4h-2v2H9v2H7v2H5v2H3v2h2v2h2v2h2v2h2v2h2v-2h2v-2h2v-2h2v-2h2V8h2V6h-2V4h-2zm0 0v2h2v2h2v2h2v2H5v-2h2v-2h2V8h2V6z"></path>
+    </svg>
+    Fill
+  </span>
+  <span v-else>
+    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+      <path fill="currentColor" d="M4 4h16v16H4z M6 6v12h12V6H6zm4 4h4v4h-4z"></path>
+    </svg>
+    Stroke
+  </span>
+</button>
+
+
+
           <button class="control-btn" @click.prevent="eraser = !eraser">
             <span v-if="eraser">  <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="M2 5h20v14H2zm2 2v10h2V7zm4 0v10h12V7z"></path></svg>
               Eraser</span>
@@ -130,11 +142,20 @@ export default {
     window.removeEventListener("resize", this.handleResize);
   },
   methods: {
-    handleResize() {
-      this.canvasWidth = window.innerWidth * 0.8;
-      this.canvasHeight = window.innerHeight * 0.5;
-    },
+  handleResize() {
+    this.canvasWidth = window.innerWidth * 0.8;
+    this.canvasHeight = window.innerHeight * 0.5;
   },
+  toggleFillMode() {
+    this.fillShape = !this.fillShape; // Cambia entre Fill y Stroke
+  },
+  fillCanvas() {
+    if (this.fillShape && this.$refs.VueCanvasDrawing) {
+      this.$refs.VueCanvasDrawing.fill({ color: this.color }); // Rellenar con el color actual
+    }
+  }
+}
+
 };
 </script>
 
