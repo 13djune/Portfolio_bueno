@@ -20,6 +20,8 @@ import enstock from '../assets/img/EN_STOCK.mp4';
 import ESDMeet1 from '../assets/img/Comunidades_landing.png'
 import ESDMeet2 from '../assets/img/Desktop_Feed_Chat.png'
 import ESDMeet3 from '../assets/img/Desktop_Feed.png'
+import ESDMeet4 from '../assets/img/PERFIL.png'
+
 
 
 // Lista de proyectos con imágenes locales
@@ -74,12 +76,11 @@ const projects = [
     media: [
     { type: 'image', src: ESDMeet1 },
     { type: 'image', src: ESDMeet2 },
-    { type: 'image', src: ESDMeet3 }
+    { type: 'image', src: ESDMeet3 },
+    { type: 'image', src: ESDMeet4 }
     ],
     additionalText: 'Este proyecto propone mejorar la comunicación en la escuela mediante una plataforma interactiva que optimiza el flujo de información y facilita la interacción entre estudiantes, docentes y personal administrativo. Al eliminar barreras comunicativas, se busca fortalecer el sentido de comunidad, promover la colaboración y crear un entorno más accesible e inclusivo para todos.',
     link: 'https://www.figma.com/proto/uuG3XtsRYQMQWLjQuyCamD/Prototipo_MDI?page-id=0%3A1&node-id=1-5524&viewport=-80%2C3%2C0.09&t=QyauFSjmlurNHo3z-1&scaling=scale-down-width&content-scaling=fixed' },
-
-
 ];
 
 const activeProject = ref(null);
