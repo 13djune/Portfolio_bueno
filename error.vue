@@ -8,7 +8,12 @@
 </template>
 
 <script setup>
+import Billar from '@/components/Billar.vue';
+
+
+
 defineProps({ error: Object })
+
 </script>
 
 <style scoped>
