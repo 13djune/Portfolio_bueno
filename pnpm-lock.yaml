@@ -56,6 +56,12 @@ importers:
       pixelarticons:
         specifier: ^1.8.1
         version: 1.8.1
+      planck:
+        specifier: ^1.3.0
+        version: 1.3.0(stage-js@1.0.0-alpha.16)
+      planck-js:
+        specifier: ^1.2.0
+        version: 1.2.0(stage-js@1.0.0-alpha.16)
       signature_pad:
         specifier: ^5.0.4
         version: 5.0.4
@@ -3233,6 +3239,18 @@ packages:
   pkg-types@1.3.1:
     resolution: {integrity: sha512-/Jm5M4RvtBFVkKWRu2BLUTNP8/M2a+UwuAX+ae4770q1qVGtfjG+WTCupoZixokjmHiry8uI+dlY8KXYV5HVVQ==}
 
+  planck-js@1.2.0:
+    resolution: {integrity: sha512-XPfrAKZMbMOtNhljD7WJ5dqJdy62N/cashCYNyVEXweIk0bXGGK2dJD5i70iWA1kYIWbM9FT48Ckf7SUDEQZSQ==}
+    engines: {node: '>=14.0'}
+    peerDependencies:
+      stage-js: ^1.0.0-alpha.5
+
+  planck@1.3.0:
+    resolution: {integrity: sha512-zsKIYYCt/0LS/+uclz7DIOgCWk8nozJRwLe9hN985HivLYfmJkTQsVRCTEWRB9GkjTcLR5P5UgDX2Cl0pVZgvA==}
+    engines: {node: '>=14.0'}
+    peerDependencies:
+      stage-js: ^1.0.0-alpha.12
+
   pluralize@8.0.0:
     resolution: {integrity: sha512-Nc3IT5yHzflTfbjgqWcCPpo7DaKy4FnpB0l/zCAW0Tc7jxAiuqSxHasntB3D7887LSrA93kDJ9IXovxJYxyLCA==}
     engines: {node: '>=4'}
@@ -3851,6 +3869,10 @@ packages:
   speakingurl@14.0.1:
     resolution: {integrity: sha512-1POYv7uv2gXoyGFpBCmpDVSNV74IfsWlDW216UPjbWufNf+bSU6GdbDsxdcxtfwb4xlI3yxzOTKClUosxARYrQ==}
     engines: {node: '>=0.10.0'}
+
+  stage-js@1.0.0-alpha.16:
+    resolution: {integrity: sha512-Sh4Ovo++zy8hZyEyYNDvkk7V8BLHlQUe195YI6fb3gTJQODcvzip72OeIiIhFiWsEyllDun3aeXnBCujD3ZlTg==}
+    engines: {node: '>=18.0'}
 
   standard-as-callback@2.1.0:
     resolution: {integrity: sha512-qoRRSyROncaz1z0mvYqIE4lCd9p2R90i6GxW3uZv5ucSu8tU7B5HXUP1gG8pVZsYNVaXjk8ClXHPttLyxAL48A==}
@@ -8222,6 +8244,14 @@ snapshots:
       mlly: 1.7.4
       pathe: 2.0.1
 
+  planck-js@1.2.0(stage-js@1.0.0-alpha.16):
+    dependencies:
+      stage-js: 1.0.0-alpha.16
+
+  planck@1.3.0(stage-js@1.0.0-alpha.16):
+    dependencies:
+      stage-js: 1.0.0-alpha.16
+
   pluralize@8.0.0: {}
 
   portfinder@1.0.32(supports-color@9.4.0):
@@ -8802,6 +8832,8 @@ snapshots:
   source-map@0.7.4: {}
 
   speakingurl@14.0.1: {}
+
+  stage-js@1.0.0-alpha.16: {}
 
   standard-as-callback@2.1.0: {}
 

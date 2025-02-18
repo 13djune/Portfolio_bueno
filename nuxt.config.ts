@@ -28,6 +28,12 @@ export default defineNuxtConfig({
         { rel: 'shortcut icon', type: 'image/x-icon', href: '/favicon.png' }
       ]
     },
+  },
+  ssr: false, // 🚀 Forzamos Nuxt a modo SPA para evitar SSR
+  router: {
+    options: {
+      strict: false // Evita problemas con rutas sensibles a mayúsculas/minúsculas
+    }
   }
  
 })
