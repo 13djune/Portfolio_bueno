@@ -32,6 +32,7 @@
     "signature_pad": "^5.0.4",
     "supports-color": "^9.4.0",
     "typeit": "^8.8.7",
+    "ufo": "^1.5.4",
     "vite": "^5.4.11",
     "vue": "latest",
     "vue-drawing-canvas": "^1.0.14",

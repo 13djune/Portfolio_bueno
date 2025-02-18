@@ -3,17 +3,14 @@
     <h1>Oops! Algo salió mal.</h1>
     <p v-if="error.statusCode">{{ error.statusCode }} - {{ error.message }}</p>
     <NuxtLink to="/">Volver al inicio</NuxtLink>
-    <Billar />
+    <Solitario />
   </div>
 </template>
 
 <script setup>
-import Billar from '@/components/Billar.vue';
+import Solitario from '~/components/Solitario.vue';
 
-
-
-defineProps({ error: Object })
-
+defineProps({ error: Object });
 </script>
 
 <style scoped>

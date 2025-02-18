@@ -71,6 +71,9 @@ importers:
       typeit:
         specifier: ^8.8.7
         version: 8.8.7
+      ufo:
+        specifier: ^1.5.4
+        version: 1.5.4
       vite:
         specifier: ^5.4.11
         version: 5.4.11(@types/node@22.10.1)(sass-embedded@1.81.1)(sass@1.81.1)(terser@5.36.0)
