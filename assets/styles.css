@@ -347,7 +347,7 @@ margin-top: 2rem;
     height: 20rem !important;
   }
   .container {
-    width: 75vw ;
+    width: 60vw ;
     height: 60vh !important;
 }
 h1{
@@ -425,5 +425,9 @@ p{
 }
 .socials {
   margin: 4rem ;
+}
+.container {
+  width: 65vw ;
+  height: 60vh !important;
 }
 }

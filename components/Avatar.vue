@@ -119,4 +119,5 @@ export default {
   height: auto;
   cursor: grab !important;
 }
+
 </style>

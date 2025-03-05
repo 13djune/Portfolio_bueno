@@ -3,9 +3,9 @@ import { ref } from 'vue';
 import Slideover from './Slideover.vue';
 
 import alphegor1 from '../assets/img/ALPHEGOR.20.png';
-import alphegor2 from '../assets/img/ALPHEGOR.1.png';
-import alphegor3 from '../assets/img/ALPHEGOR.3.png';
-import alphegor4 from '../assets/img/ALPHEGOR.4.png';
+import alphegor2 from '../assets/img/ALPHEGOR1.png';
+import alphegor3 from '../assets/img/ALPHEGOR3.png';
+import alphegor4 from '../assets/img/ALPHEGOR4.png';
 
 import talsie1 from '../assets/img/TALSIE2.png';
 import talsie2 from '../assets/img/TALSIE1.png';

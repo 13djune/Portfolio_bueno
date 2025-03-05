@@ -3,6 +3,7 @@
     <h1>Oops! Algo salió mal.</h1>
     <p v-if="error.statusCode">{{ error.statusCode }} - {{ error.message }}</p>
     <NuxtLink to="/">Volver al inicio</NuxtLink>
+    <Solitario/>
   </div>
 </template>
 
