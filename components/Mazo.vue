@@ -5,13 +5,13 @@
         <div v-if="deck.length > 0" class="card-back">🂠</div>
       </div>
       <div class="discard-pile">
-        <Carta
+        <Carta class="carta"
   v-for="(card, index) in wastePile"
   :key="`${card.rank}-${card.suit}`"
   :rank="card.rank"
   :suit="card.suit"
   :isFaceUp="true"
-  :draggable="index === wastePile.length - 1" 
+  :draggable="index === wastePile.slice(-3).length - 1" 
   @dragstart="() => startDrag(card, index)"
   />
 
@@ -42,18 +42,26 @@
       );
       this.shuffleDeck();
     },
-
+    setDeck(deck) {
+      this.deck = deck || [];  // 🔥 Se asegura de que el mazo sea actualizado correctamente
+  },
     shuffleDeck() {
       this.deck.sort(() => Math.random() - 0.5);
     },
 
     dealCards() {
-      if (!this.deck || this.deck.length === 0) return;
+    if (!this.deck.length && this.wastePile.length) {
+        this.deck = this.wastePile.reverse().map(card => ({ ...card, isFaceUp: false }));
+        this.wastePile = [];
+        return;
+    }
 
-      const dealtCards = this.deck.splice(-3).map((card) => ({ ...card, isFaceUp: true }));
-      this.wastePile.push(...dealtCards);
-      this.$emit("cards-dealt", dealtCards);
-    },
+    if (this.deck.length === 0) return;
+
+    const dealtCards = this.deck.splice(-3).map((card) => ({ ...card, isFaceUp: true }));
+    this.wastePile.push(...dealtCards);
+    this.$emit("cards-dealt", dealtCards);
+},
 
     startDrag(card, index) {
       if (index === this.wastePile.length - 1) {
@@ -82,7 +90,7 @@
     border-radius: 5px;
     cursor: pointer;
   }
-  .deck, .discard-pile {
+  .deck {
     width: 4rem;
     height: 6rem;
     display: flex;
@@ -99,4 +107,27 @@
     justify-content: center;
     font-size: 2rem;
   }
+  .discard-pile {
+  position: relative;
+  width: 4rem;
+  height: 6rem;
+}
+
+.discard-pile .carta {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: transform 0.2s ease-in-out;
+}
+
+/* Ajustar la posición de cada carta para dar un efecto de apilamiento */
+.discard-pile .carta:nth-child(1) {
+  transform: translateX(0px);
+}
+.discard-pile .carta:nth-child(2) {
+  transform: translateX(20px);
+}
+.discard-pile .carta:nth-child(3) {
+  transform: translateX(40px);
+}
   </style>

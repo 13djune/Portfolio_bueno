@@ -72,6 +72,24 @@
   this.$refs.mazo.setDeck(deck);
 }
 ,
+restartGame() {
+    console.log("🔄 Reiniciando juego...");
+
+    // Resetear fundaciones y tableau
+    this.fundaciones = [[], [], [], []];
+    this.tableau = [[], [], [], [], [], [], []];
+    this.draggedCard = null;
+
+    // Asegurar que el mazo y la pila de descarte se reinicien correctamente
+    if (this.$refs.mazo) {
+      this.$refs.mazo.deck = [];
+      this.$refs.mazo.wastePile = [];
+      this.$refs.mazo.initializeDeck();
+    }
+
+    // Inicializar el juego nuevamente
+    this.initializeGame();
+  },
       
       handleCardsDealt(cards) {
         console.log("Cards dealt:", cards);
@@ -177,22 +195,6 @@ isValidFoundationMove(foundationPile, card) {
            values[topCard.rank] === values[card.rank] - 1;
   }
 },
-
-
-  restartGame() {
-    console.log("🔄 Reiniciando juego...");
-
-    this.fundaciones = [[], [], [], []];
-    this.tableau = [[], [], [], [], [], [], []];
-    this.draggedCard = null;
-
-    // Asegurar que el mazo se reinicie correctamente
-    if (this.$refs.mazo) {
-      this.$refs.mazo.initializeDeck();
-    }
-
-    this.initializeGame();
-  },
 mounted() {
   this.initializeGame();
   this.$nextTick(() => {
