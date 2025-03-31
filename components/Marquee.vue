@@ -45,7 +45,7 @@
   .marquee-content {
     display: inline-block;
     white-space: nowrap;
-    animation: marquee 10s linear infinite; /* Animación: duración y repetición infinita */
+    animation: marquee 20s linear infinite; /* Animación: duración y repetición infinita */
   }
   
   @keyframes marquee {
