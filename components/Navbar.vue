@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { ref } from 'vue';
 
+
 // Links para el menú
 const links = ref([
   { label: 'About me', icon: 'i-pixelarticons-script', to: '/' },
@@ -15,25 +16,29 @@ const isMenuOpen = ref(false);
 const toggleMenu = () => {
   isMenuOpen.value = !isMenuOpen.value;
 };
+
 </script>
 <template>
-  <!-- Botón de menú hamburguesa -->
-  <button 
-    class="menu-icon"
-    @click="toggleMenu"
-    aria-label="Toggle Menu"
-  >
-  <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="M4 6h16v2H4zm0 5h16v2H4zm16 5H4v2h16z"></path></svg>
-  </button>
+  <div>
+    <!-- Botón de menú hamburguesa -->
+    <button 
+      class="menu-icon"
+      @click="toggleMenu"
+      aria-label="Toggle Menu"
+    >
+    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="M4 6h16v2H4zm0 5h16v2H4zm16 5H4v2h16z"></path></svg>
+    </button>
 
-  <!-- Menú vertical -->
-  <UVerticalNavigation
+    <!-- Menú vertical -->
+    <UVerticalNavigation
     highlight
     orientation="vertical"
     :links="links"
     class="menu"
     :class="{ 'menu--open': isMenuOpen }"
-  />
+
+    />
+  </div>
 </template>
 
 <style scoped>

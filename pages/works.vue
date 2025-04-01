@@ -4,7 +4,7 @@
     <h1>You can take a look at my projects:</h1>
   </div>
     <Grid/>
-    <img src="assets/img/cerezas.gif" alt="Cherries in pixel art moving" class="cereza">
+   
 </template>
 <script setup>
 import interact from "interactjs";

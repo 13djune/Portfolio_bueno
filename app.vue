@@ -7,12 +7,17 @@
     <SwitchMode />
     <NuxtPage />
     <div id="footer">
-    <p>Let's work together to create something unforgettable!</p>
-    <br>
-    <p>Belén (June) Castillo · updated January 2025 ©</p>
-    <br>
-    <p>Pixel art: <a id="marina" href="https://marinamartinprieto.cargo.site/">Marina Martín (Concept Artist)</a></p>
-  </div>
+      <div>
+        <p>Let's work together to create something unforgettable!</p>
+        <br>  
+        <p>All this web is programmed by me &lt;3 </p>
+        <br>
+        <p>Belén (June) Castillo · updated Abril 2025 ©</p>
+        <br>
+        <p>Pixel art: <a id="marina" href="https://marinamartinprieto.cargo.site/">Marina Martín (Concept Artist)</a></p>
+      </div>
+      <img src="assets/img/cerezas.gif" alt="Cherries in pixel art moving" class="cereza">
+      </div>
   </div>
 
 </template>
@@ -146,7 +151,7 @@ onBeforeUnmount(() => {
     align-items: center;
     margin: 3rem;
 }
-#footer>p {
+#footer>div>p {
     text-align: center;
 }
 #marina:hover{
