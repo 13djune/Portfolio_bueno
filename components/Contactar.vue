@@ -19,7 +19,7 @@ const modules = [
   {
     title: 'Instagram',
     description: 'Follow my socials!',
-    to: 'https://instagram.com/june.css',
+    to: 'https://instagram.com/404.june',
     icon: 'pixelarticons:camera-alt'
   },
   {
